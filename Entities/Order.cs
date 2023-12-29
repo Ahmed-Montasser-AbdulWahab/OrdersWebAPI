@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Entities
 {
@@ -21,6 +22,9 @@ namespace Entities
 
         [Range(0, double.MaxValue)]
         public double? TotalAmount { get; set; }
+
+        
+        public virtual ICollection<OrderItem> Items { get; set; }
     }
 
 
