@@ -1,9 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.Design;
+
 
 namespace Entities
 {
@@ -26,4 +23,17 @@ namespace Entities
             });
         }
     }
+
+    //public class OrderDbContextFactory : IDesignTimeDbContextFactory<OrderDbContext>
+    //{
+        
+    //    public OrderDbContext CreateDbContext(string[] args)
+    //    {
+
+    //        var optionsBuilder = new DbContextOptionsBuilder<OrderDbContext>();
+    //        optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=OrderDatabase;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+
+    //        return new OrderDbContext(optionsBuilder.Options);
+    //    }
+    //}
 }
